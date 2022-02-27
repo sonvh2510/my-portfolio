@@ -1,9 +1,10 @@
 import { StrictMode } from "react";
-import { GlobalStyle, GridStyles } from "./styles";
 import ReactDOM from "react-dom";
 import { store } from "./store";
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
+import { GlobalStyle, GridStyles } from "./styles";
 
 import App from "./App";
 
@@ -12,7 +13,9 @@ ReactDOM.render(
     <GlobalStyle></GlobalStyle>
     <GridStyles></GridStyles>
     <Provider store={store}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>
   </StrictMode>,
   document.getElementById("root")

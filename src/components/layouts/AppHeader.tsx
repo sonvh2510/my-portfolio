@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import AppAvatar from "./AppAvatar";
+import AppSocial from "./AppSocial";
 import AppTitle from "./AppTitle";
 
 const Header = styled.header`
@@ -17,6 +18,7 @@ const AppHeader = () => {
     <Header>
       <AppAvatar></AppAvatar>
       <AppTitle></AppTitle>
+      <AppSocial></AppSocial>
     </Header>
   );
 };
