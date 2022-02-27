@@ -38,7 +38,7 @@ const Avatar = styled.div`
 const AppAvatar = () => {
   return (
     <Avatar>
-      <img src="/images/avatar.jpeg"></img>
+      <img src="/images/avatar.jpeg" alt="Vũ Hoàng Sơn"></img>
     </Avatar>
   );
 };
