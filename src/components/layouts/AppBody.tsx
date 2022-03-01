@@ -11,11 +11,12 @@ const Body = styled.main`
   padding: 60px;
 `;
 
-const About = lazy(() => import("../../pages/About"));
-const Contact = lazy(() => import("../../pages/Contact"));
 const Home = lazy(() => import("../../pages/Home"));
-const Portfolio = lazy(() => import("../../pages/Portfolio"));
+const About = lazy(() => import("../../pages/About"));
 const Resume = lazy(() => import("../../pages/Resume"));
+const Portfolio = lazy(() => import("../../pages/Portfolio"));
+const Blog = lazy(() => import("../../pages/Blog"));
+const Contact = lazy(() => import("../../pages/Contact"));
 
 const AppBody = () => {
   return (
@@ -50,6 +51,14 @@ const AppBody = () => {
           element={
             <Suspense fallback={<Loading />}>
               <Portfolio />
+            </Suspense>
+          }
+        ></Route>
+        <Route
+          path="/blog"
+          element={
+            <Suspense fallback={<Loading />}>
+              <Blog />
             </Suspense>
           }
         ></Route>

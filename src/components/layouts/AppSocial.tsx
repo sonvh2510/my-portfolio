@@ -9,6 +9,7 @@ const Social = styled.ul`
   display: flex;
   justify-content: center;
   margin-top: 15px;
+  padding-inline-start: 0;
 `;
 const SocialItem = styled.li`
   margin: 0 5px;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import AppBody from "./AppBody";
 import AppHeader from "./AppHeader";
+import AppNav from "./AppNav";
 
 export const Content = styled.section`
   position: relative;
@@ -20,6 +21,7 @@ const AppContent = () => {
   return (
     <Content>
       <AppHeader></AppHeader>
+      <AppNav></AppNav>
       <AppBody></AppBody>
     </Content>
   );
