@@ -28,6 +28,7 @@ const SocialItem = styled.li`
     &:hover {
       background-color: rgba(255, 255, 255, 0.3);
       transition: all 0.3s ease;
+      color: white;
     }
   }
 `;

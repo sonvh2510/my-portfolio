@@ -45,7 +45,7 @@ export const GlobalStyle = createGlobalStyle`
     --bs-black-rgb: 0, 0, 0;
     --bs-body-color-rgb: 33, 37, 41;
     --bs-body-bg-rgb: 255, 255, 255;
-    --bs-font-sans-serif: "Raleway", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-sans-serif: "Poppins", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
     --bs-body-font-family: var(--bs-font-sans-serif);
@@ -99,7 +99,7 @@ export const GlobalStyle = createGlobalStyle`
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1;
   }
 
   p {

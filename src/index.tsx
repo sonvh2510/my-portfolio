@@ -4,7 +4,7 @@ import { store } from "./store";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
-import { GlobalStyle, GridStyles } from "./styles";
+import { GlobalStyle, GridStyles, Ultilities } from "./styles";
 
 import App from "./App";
 
@@ -12,6 +12,7 @@ ReactDOM.render(
   <StrictMode>
     <GlobalStyle></GlobalStyle>
     <GridStyles></GridStyles>
+    <Ultilities></Ultilities>
     <Provider store={store}>
       <BrowserRouter>
         <App />

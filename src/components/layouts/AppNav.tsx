@@ -12,7 +12,7 @@ const Nav = styled.nav`
   width: 70px;
   right: -85px;
   top: 0;
-  background-color: #444;
+  background-color: #ffffff;
   border-radius: 35px;
   z-index: 999;
   list-style: none;
@@ -20,7 +20,7 @@ const Nav = styled.nav`
 
   .nav-item {
     a {
-      color: white;
+      color: black;
       text-decoration: none;
       display: flex;
       align-items: center;
