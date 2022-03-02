@@ -1,4 +1,15 @@
+import { PageTitle } from "../styles/globals/elements";
+
 const Resume = () => {
-  return <div>Resume</div>;
+  return (
+    <div>
+      <PageTitle>
+        <h2>
+          My
+          <span> Resume</span>
+        </h2>
+      </PageTitle>
+    </div>
+  );
 };
 export default Resume;

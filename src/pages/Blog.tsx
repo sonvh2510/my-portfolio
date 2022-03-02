@@ -1,11 +1,14 @@
-import { BlockTitle } from "../styles/globals/elements";
+import { PageTitle } from "../styles/globals/elements";
 
 const Blog = () => {
   return (
     <div>
-      <BlockTitle>
-        <h3>Clients</h3>
-      </BlockTitle>
+      <PageTitle>
+        <h2>
+          Writes 
+          <span> what I like</span>
+        </h2>
+      </PageTitle>
     </div>
   );
 };
