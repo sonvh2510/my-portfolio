@@ -16,7 +16,7 @@ const Body = styled.main`
     left: 15px;
     right: 15px;
     bottom: 75px;
-    padding: 15px;
+    padding: 30px 15px;
   }
 `;
 

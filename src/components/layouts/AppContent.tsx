@@ -16,7 +16,6 @@ export const Content = styled.section`
     max-width: 1280px;
     height: 80vh;
     margin: 10vh auto;
-    overflow-y: auto;
     padding: 0;
     background-color: green;
     box-shadow: 0 0 100px -5px rgb(0 0 0 / 25%);

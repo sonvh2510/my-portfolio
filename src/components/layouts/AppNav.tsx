@@ -14,6 +14,8 @@ const Nav = styled.nav`
   box-shadow: 0 0 30px -5px rgb(0 0 0 / 15%);
 
   .nav-item {
+    display: flex;
+    justify-content: center;
     a {
       color: black;
       text-decoration: none;
@@ -21,6 +23,7 @@ const Nav = styled.nav`
       align-items: center;
       justify-content: center;
       height: 60px;
+      width: 60px;
       padding: 10px;
     }
     i {
@@ -49,8 +52,11 @@ const Nav = styled.nav`
     right: 0;
     flex-direction: row;
     border-radius: 15px 15px 0 0;
-    justify-content: space-around;
+    justify-content: center;
     z-index: 100;
+    .nav-item {
+      margin: 0 auto;
+    }
   }
 `;
 
