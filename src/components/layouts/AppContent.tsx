@@ -6,9 +6,10 @@ import AppHeader from "./AppHeader";
 import AppNav from "./AppNav";
 
 export const Content = styled.section`
+  flex-direction: column;
   @media (min-width: ${BREAKPOINTS_UP.lg}) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 90vh;
     margin: 5vh auto;
     position: relative;
