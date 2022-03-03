@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import React, { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import { store } from "./store";
 import { Provider } from "react-redux";
@@ -7,7 +7,6 @@ import * as serviceWorker from "./serviceWorker";
 import { GlobalStyle, GridStyles, Ultilities } from "./styles";
 
 import App from "./App";
-
 ReactDOM.render(
   <StrictMode>
     <GlobalStyle></GlobalStyle>

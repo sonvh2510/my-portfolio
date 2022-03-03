@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 import "../../assets/scss/fontawesome.scss";
@@ -10,6 +11,9 @@ const Social = styled.ul`
   justify-content: center;
   margin-top: 15px;
   padding-inline-start: 0;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 const SocialItem = styled.li`
   margin: 0 5px;

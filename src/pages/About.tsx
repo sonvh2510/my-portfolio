@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { BlockTitle, PageTitle } from "../styles/globals/elements";
 
@@ -26,7 +27,8 @@ const About = () => {
             <p>
               Hello!
               <br />
-              My name is Son and I have more than 4 years in work as a Frontend Developer.
+              My name is Son and I have more than 4 years in work as a Frontend
+              Developer.
             </p>
           </div>
           <div className="col-sm-5">
@@ -43,7 +45,7 @@ const About = () => {
                 <li>
                   <b className="title">Address </b>
                   <span className="value">
-                     Nguyễn Lương Bằng, P. Phú Mỹ, Q.7, TP. Hồ Chí Minh
+                    Nguyễn Lương Bằng, P. Phú Mỹ, Q.7, TP. Hồ Chí Minh
                   </span>
                 </li>
                 <li>

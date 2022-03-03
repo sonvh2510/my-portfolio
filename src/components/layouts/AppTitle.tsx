@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 const Title = styled.div`
@@ -14,6 +15,20 @@ const Title = styled.div`
     color: #fff;
     margin: 5px 0;
     line-height: 1.2em;
+  }
+  @media (max-width: 1024px) {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    padding-left: 30px;
+    h2 {
+      font-size: 28px;
+    }
+    h4 {
+      font-size: 14px;
+    }
   }
 `;
 

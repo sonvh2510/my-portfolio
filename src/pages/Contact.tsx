@@ -1,3 +1,4 @@
+import React from "react";
 import { PageTitle } from "../styles/globals/elements";
 
 const Contact = () => {

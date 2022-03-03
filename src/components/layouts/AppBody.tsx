@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import Loading from "./Loading";
@@ -9,6 +9,15 @@ const Body = styled.main`
   flex-basis: 0;
   flex-grow: 1;
   padding: 60px;
+  overflow-y: auto;
+  @media (max-width: 1024px) {
+    position: fixed;
+    top: 100px;
+    left: 15px;
+    right: 15px;
+    bottom: 75px;
+    padding: 15px;
+  }
 `;
 
 const Home = lazy(() => import("../../pages/Home"));

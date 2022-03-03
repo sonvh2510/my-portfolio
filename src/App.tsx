@@ -1,5 +1,6 @@
+import React from "react";
 import styled from "styled-components";
-import { BREAKPOINTS_DOWN } from "./styles";
+import { BREAKPOINTS_DOWN, BREAKPOINTS_UP } from "./styles";
 
 import AppBackground from "./components/layouts/AppBackground";
 import AppContent from "./components/layouts/AppContent";
@@ -14,8 +15,11 @@ export const AppWrapper = styled.div`
   padding: 0 100px;
   overflow: hidden;
 
-  @media (max-width: ${BREAKPOINTS_DOWN.xl}) {
+  @media (min-width: ${BREAKPOINTS_UP.xl}) {
     padding-left: 30px;
+  }
+  @media (max-width: ${BREAKPOINTS_DOWN.md}) {
+    padding: 0 20px;
   }
 `;
 

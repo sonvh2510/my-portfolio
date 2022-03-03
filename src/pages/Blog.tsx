@@ -1,3 +1,4 @@
+import React from "react";
 import { PageTitle } from "../styles/globals/elements";
 
 const Blog = () => {
@@ -5,7 +6,7 @@ const Blog = () => {
     <div>
       <PageTitle>
         <h2>
-          Writes 
+          Writes
           <span> what I like</span>
         </h2>
       </PageTitle>
