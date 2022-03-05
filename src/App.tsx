@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BREAKPOINTS_DOWN, BREAKPOINTS_UP } from "./styles";
+import {BREAKPOINTS_UP} from "./styles";
 
 import AppBackground from "./components/layouts/AppBackground";
 import AppContent from "./components/layouts/AppContent";
@@ -21,8 +21,8 @@ export const AppWrapper = styled.div`
 const App = () => {
   return (
     <AppWrapper className="app app--wrapper">
-      <AppBackground></AppBackground>
-      <AppContent></AppContent>
+      <AppBackground/>
+      <AppContent/>
     </AppWrapper>
   );
 };

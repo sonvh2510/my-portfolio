@@ -12,11 +12,14 @@ const Body = styled.main`
   overflow-y: auto;
   @media (max-width: 1024px) {
     position: fixed;
-    top: 100px;
-    left: 15px;
-    right: 15px;
-    bottom: 75px;
-    padding: 30px 15px;
+    max-width: 660px;
+    width: calc(100% - 30px);
+    min-height: 320px;
+    max-height: calc(100% - 178px);
+    left: 50%;
+    top: 50%;
+    padding: 30px;
+    transform: translate(-50%, -50%);
   }
 `;
 

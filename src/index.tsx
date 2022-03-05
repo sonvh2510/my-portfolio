@@ -1,20 +1,21 @@
-import React, { StrictMode } from "react";
+import React, {StrictMode} from "react";
 import ReactDOM from "react-dom";
-import { store } from "./store";
-import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import {store} from "./store";
+import {Provider} from "react-redux";
+import {BrowserRouter} from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
-import { GlobalStyle, GridStyles, Ultilities } from "./styles";
+import {GlobalStyle, GridStyles, Ultilities} from "./styles";
 
 import App from "./App";
+
 ReactDOM.render(
   <StrictMode>
-    <GlobalStyle></GlobalStyle>
-    <GridStyles></GridStyles>
-    <Ultilities></Ultilities>
+    <GlobalStyle/>
+    <GridStyles/>
+    <Ultilities/>
     <Provider store={store}>
       <BrowserRouter>
-        <App />
+        <App/>
       </BrowserRouter>
     </Provider>
   </StrictMode>,
