@@ -1,4 +1,4 @@
-import React, { Link } from "react-router-dom";
+import React, { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 import { BREAKPOINTS_DOWN, BREAKPOINTS_UP } from "../../styles";
@@ -24,6 +24,15 @@ const Nav = styled.nav`
       height: 60px;
       width: 60px;
       padding: 10px;
+
+      &.active {
+        background-color: rgba(0, 128, 0, .5);
+        border-radius: 50%;
+
+        i {
+          color: white;
+        }
+      }
     }
 
     i {
@@ -65,34 +74,34 @@ const AppNav = () => {
   return (
     <Nav>
       <div className="nav-item">
-        <Link to="/">
-          <i className="fa-light fa-house"></i>
-        </Link>
+        <NavLink to="" className={ ({ isActive }) => isActive ? "active" : "" }>
+          <i className="fa-light fa-house" />
+        </NavLink>
       </div>
       <div className="nav-item">
-        <Link to="/about-me">
-          <i className="fa-light fa-user"></i>
-        </Link>
+        <NavLink to="about-me" className={ ({ isActive }) => isActive ? "active" : "" }>
+          <i className="fa-light fa-user" />
+        </NavLink>
       </div>
       <div className="nav-item">
-        <Link to="/resume">
-          <i className="fa-light fa-graduation-cap"></i>
-        </Link>
+        <NavLink to="my-resume" className={ ({ isActive }) => isActive ? "active" : "" }>
+          <i className="fa-light fa-graduation-cap" />
+        </NavLink>
       </div>
       <div className="nav-item">
-        <Link to="/portfolio">
-          <i className="fa-light fa-briefcase"></i>
-        </Link>
+        <NavLink to="my-portfolio" className={ ({ isActive }) => isActive ? "active" : "" }>
+          <i className="fa-light fa-briefcase" />
+        </NavLink>
       </div>
       <div className="nav-item">
-        <Link to="/blog">
-          <i className="fa-light fa-newspaper"></i>
-        </Link>
+        <NavLink to="my-blog" className={ ({ isActive }) => isActive ? "active" : "" }>
+          <i className="fa-light fa-newspaper" />
+        </NavLink>
       </div>
       <div className="nav-item">
-        <Link to="/contact-me">
-          <i className="fa-light fa-paper-plane"></i>
-        </Link>
+        <NavLink to="contact-me" className={ ({ isActive }) => isActive ? "active" : "" }>
+          <i className="fa-light fa-paper-plane" />
+        </NavLink>
       </div>
     </Nav>
   );
