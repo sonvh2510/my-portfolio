@@ -6,14 +6,16 @@ import { BREAKPOINTS_DOWN, BREAKPOINTS_UP } from "../../styles";
 const Nav = styled.nav`
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #ffffff;
   z-index: 999;
   list-style: none;
   box-shadow: 0 0 30px -5px rgb(0 0 0 / 15%);
 
   .nav-item {
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
 
     a {
       color: black;
@@ -21,39 +23,36 @@ const Nav = styled.nav`
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 60px;
-      width: 60px;
-      padding: 10px;
+      width: 100%;
+      height: 100%;
 
-      &.active {
-        background-color: rgba(0, 128, 0, .5);
+      &.active, &:hover {
         border-radius: 50%;
+        transition: all .3s ease-in-out;
+        background-color: rgba(0, 128, 0, .6);
 
         i {
           color: white;
         }
       }
+
     }
 
     i {
-      font-size: 28px;
-    }
-
-    &:hover {
-      a {
-        transition: all 0.3s ease;
-        color: green;
-      }
+      font-size: 24px;
     }
   }
 
   @media (min-width: ${ BREAKPOINTS_UP.lg }) {
     border-radius: 35px;
     position: absolute;
-    padding: 15px 0;
+    padding: 10px 0;
     width: 70px;
     right: -85px;
     top: 0;
+    .nav-item + .nav-item {
+      margin-top: 10px;
+    }
   }
   @media (max-width: ${ BREAKPOINTS_DOWN.lg }) {
     position: fixed;
@@ -61,7 +60,8 @@ const Nav = styled.nav`
     left: 0;
     right: 0;
     flex-direction: row;
-    border-radius: 15px 15px 0 0;
+    padding: 5px;
+    border-radius: 30px;
     justify-content: center;
     z-index: 100;
     .nav-item {

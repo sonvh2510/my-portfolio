@@ -7,7 +7,7 @@ const Avatar = styled.div`
     position: relative;
     z-index: 2;
     width: 100%;
-    border-radius: 50%;
+    background-color: red;
   }
 
   @media (min-width: 1025px) {
@@ -15,14 +15,13 @@ const Avatar = styled.div`
     width: 180px;
     margin: 0 auto 30px;
     z-index: 1;
-    border-radius: 50%;
 
     &:before {
+      border-radius: 50%;
       position: absolute;
       opacity: 0.3;
       top: 7%;
       left: 7%;
-      border-radius: 300px;
       content: "";
       height: calc(100% + 0px);
       width: calc(100% + 0px);
@@ -34,11 +33,18 @@ const Avatar = styled.div`
       background-size: 6px 6px;
       z-index: 1;
     }
+
+    img {
+      border-radius: 50%;
+    }
   }
   @media (max-width: 1024px) {
     -ms-flex: 0 0 68px;
     flex: 0 0 68px;
     max-width: 68px;
+    img {
+      border-radius: 15px;
+    }
   }
 `;
 

@@ -22,7 +22,8 @@ const Header = styled.header`
     left: 0;
     right: 0;
     background-color: green;
-    padding: 10px 15px;
+    padding: 10px;
+    border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
     z-index: 100;
