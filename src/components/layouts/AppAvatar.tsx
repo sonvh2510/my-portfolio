@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useAppSelector } from "../../store/hooks";
 
 const Avatar = styled.div`
   img {
@@ -8,6 +9,7 @@ const Avatar = styled.div`
     width: 100%;
     border-radius: 50%;
   }
+
   @media (min-width: 1025px) {
     position: relative;
     width: 180px;
@@ -24,13 +26,11 @@ const Avatar = styled.div`
       content: "";
       height: calc(100% + 0px);
       width: calc(100% + 0px);
-      background-image: -webkit-repeating-radial-gradient(
-        center center,
-        #fff,
-        #fff 1px,
-        transparent 0px,
-        transparent 100%
-      );
+      background-image: -webkit-repeating-radial-gradient(center center,
+      #fff,
+      #fff 1px,
+      transparent 0px,
+      transparent 100%);
       background-size: 6px 6px;
       z-index: 1;
     }
@@ -43,9 +43,17 @@ const Avatar = styled.div`
 `;
 
 const AppAvatar = () => {
+
+  const { avatar, name } = useAppSelector(({ profile }) => {
+    return {
+      avatar: profile.data.avatar,
+      name: profile.data.name
+    };
+  });
+
   return (
     <Avatar>
-      <img src="/images/avatar.jpeg" alt="Vũ Hoàng Sơn"></img>
+      <img width="180" height="180" src={ avatar } alt={ name } />
     </Avatar>
   );
 };

@@ -7,11 +7,9 @@ import AppNav from "./AppNav";
 
 export const Content = styled.section`
   flex-direction: column;
-  @media (min-width: ${BREAKPOINTS_UP.lg}) {
+  @media (min-width: ${ BREAKPOINTS_UP.lg }) {
     display: flex;
     flex-direction: row;
-    height: 90vh;
-    margin: 5vh auto;
     position: relative;
     width: 100%;
     max-width: 1280px;
@@ -28,9 +26,9 @@ export const Content = styled.section`
 const AppContent = () => {
   return (
     <Content>
-      <AppHeader></AppHeader>
-      <AppNav></AppNav>
-      <AppBody></AppBody>
+      <AppHeader />
+      <AppNav />
+      <AppBody />
     </Content>
   );
 };

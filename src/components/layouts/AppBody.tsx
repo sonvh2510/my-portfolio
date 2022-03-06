@@ -37,7 +37,7 @@ const AppBody = () => {
         <Route
           path="/"
           element={
-            <Suspense fallback={<Loading />}>
+            <Suspense fallback={ <Loading /> }>
               <Home />
             </Suspense>
           }
@@ -45,7 +45,7 @@ const AppBody = () => {
         <Route
           path="/about-me"
           element={
-            <Suspense fallback={<Loading />}>
+            <Suspense fallback={ <Loading /> }>
               <About />
             </Suspense>
           }
@@ -53,7 +53,7 @@ const AppBody = () => {
         <Route
           path="/resume"
           element={
-            <Suspense fallback={<Loading />}>
+            <Suspense fallback={ <Loading /> }>
               <Resume />
             </Suspense>
           }
@@ -61,7 +61,7 @@ const AppBody = () => {
         <Route
           path="/portfolio"
           element={
-            <Suspense fallback={<Loading />}>
+            <Suspense fallback={ <Loading /> }>
               <Portfolio />
             </Suspense>
           }
@@ -69,7 +69,7 @@ const AppBody = () => {
         <Route
           path="/blog"
           element={
-            <Suspense fallback={<Loading />}>
+            <Suspense fallback={ <Loading /> }>
               <Blog />
             </Suspense>
           }
@@ -77,7 +77,7 @@ const AppBody = () => {
         <Route
           path="/contact-me"
           element={
-            <Suspense fallback={<Loading />}>
+            <Suspense fallback={ <Loading /> }>
               <Contact />
             </Suspense>
           }

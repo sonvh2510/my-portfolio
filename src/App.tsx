@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-import {BREAKPOINTS_UP} from "./styles";
-
+import { BREAKPOINTS_UP } from "./styles";
 import AppBackground from "./components/layouts/AppBackground";
 import AppContent from "./components/layouts/AppContent";
+import { fetchProfile } from "./store/profile/thunks";
+import { useAppDispatch } from "./store/hooks";
 
 export const AppWrapper = styled.div`
-  @media (min-width: ${BREAKPOINTS_UP.lg}) {
+  @media (min-width: ${ BREAKPOINTS_UP.lg }) {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -19,10 +20,16 @@ export const AppWrapper = styled.div`
 `;
 
 const App = () => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProfile("profile"));
+  }, []);
+
   return (
     <AppWrapper className="app app--wrapper">
-      <AppBackground/>
-      <AppContent/>
+      <AppBackground />
+      <AppContent />
     </AppWrapper>
   );
 };

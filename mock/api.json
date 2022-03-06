@@ -1,0 +1,27 @@
+{
+  "profile": {
+    "data": {
+      "name": "Vũ Hoàng Sơn",
+      "title": "Frontend Developer",
+      "avatar": "/images/avatar.jpeg",
+      "socials": [
+        {
+          "type": "LinkedIn",
+          "url": "https://www.linkedin.com/in/sonvh2510"
+        },
+        {
+          "type": "Github",
+          "url": "https://github.com/sonvh2510"
+        },
+        {
+          "type": "Facebook",
+          "url": "https://www.facebook.com/sonvh2510"
+        },
+        {
+          "type": "Email",
+          "url": "mailto:sonvh2510@gmail.com"
+        }
+      ]
+    }
+  }
+}

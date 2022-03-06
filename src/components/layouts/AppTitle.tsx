@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useAppSelector } from "../../store/hooks";
 
 const Title = styled.div`
   h2 {
@@ -9,6 +10,7 @@ const Title = styled.div`
     margin: 5px 0 7px;
     line-height: 1.2em;
   }
+
   h4 {
     font-size: 18px;
     font-weight: 300;
@@ -16,6 +18,7 @@ const Title = styled.div`
     margin: 5px 0;
     line-height: 1.2em;
   }
+
   @media (max-width: 1024px) {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -26,6 +29,7 @@ const Title = styled.div`
     h2 {
       font-size: 28px;
     }
+
     h4 {
       font-size: 14px;
     }
@@ -33,10 +37,16 @@ const Title = styled.div`
 `;
 
 const AppTitle = () => {
+  const { name, title } = useAppSelector(({ profile }) => {
+    return {
+      name: profile.data.name,
+      title: profile.data.title
+    };
+  });
   return (
     <Title>
-      <h2>Vũ Hoàng Sơn</h2>
-      <h4>Software Frontend Enginner</h4>
+      <h2>{ name }</h2>
+      <h4>{ title }</h4>
     </Title>
   );
 };

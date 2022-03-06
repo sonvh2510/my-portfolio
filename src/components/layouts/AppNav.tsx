@@ -16,6 +16,7 @@ const Nav = styled.nav`
   .nav-item {
     display: flex;
     justify-content: center;
+
     a {
       color: black;
       text-decoration: none;
@@ -26,6 +27,7 @@ const Nav = styled.nav`
       width: 60px;
       padding: 10px;
     }
+
     i {
       font-size: 28px;
     }
@@ -37,7 +39,8 @@ const Nav = styled.nav`
       }
     }
   }
-  @media (min-width: ${BREAKPOINTS_UP.lg}) {
+
+  @media (min-width: ${ BREAKPOINTS_UP.lg }) {
     border-radius: 35px;
     position: absolute;
     padding: 15px 0;
@@ -45,7 +48,7 @@ const Nav = styled.nav`
     right: -85px;
     top: 0;
   }
-  @media (max-width: ${BREAKPOINTS_DOWN.lg}) {
+  @media (max-width: ${ BREAKPOINTS_DOWN.lg }) {
     position: fixed;
     bottom: 0;
     left: 0;

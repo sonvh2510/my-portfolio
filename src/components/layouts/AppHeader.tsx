@@ -6,7 +6,7 @@ import AppSocial from "./AppSocial";
 import AppTitle from "./AppTitle";
 
 const Header = styled.header`
-  @media (min-width: ${BREAKPOINTS_UP.lg}) {
+  @media (min-width: ${ BREAKPOINTS_UP.lg }) {
     width: 100%;
     max-width: 380px;
     height: 100%;
@@ -16,7 +16,7 @@ const Header = styled.header`
     padding: 70px 30px 45px;
     overflow: auto;
   }
-  @media (max-width: ${BREAKPOINTS_DOWN.lg}) {
+  @media (max-width: ${ BREAKPOINTS_DOWN.lg }) {
     position: fixed;
     top: 0;
     left: 0;

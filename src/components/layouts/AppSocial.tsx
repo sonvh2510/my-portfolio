@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useAppSelector } from "../../store/hooks";
+import { SocialEnum } from "../../interfaces/profile.interface";
 
 import "../../assets/scss/fontawesome.scss";
 import "../../assets/scss/brands.scss";
@@ -17,6 +19,7 @@ const Social = styled.ul`
 `;
 const SocialItem = styled.li`
   margin: 0 5px;
+
   a {
     color: white;
     display: flex;
@@ -26,9 +29,11 @@ const SocialItem = styled.li`
     height: 32px;
     text-decoration: none;
     border-radius: 50%;
+
     i {
       line-height: 1;
     }
+
     &:hover {
       background-color: rgba(255, 255, 255, 0.3);
       transition: all 0.3s ease;
@@ -38,28 +43,25 @@ const SocialItem = styled.li`
 `;
 
 const AppSocial = () => {
+  const { socials } = useAppSelector(({ profile }) => {
+    return {
+      socials: profile.data.socials,
+    };
+  });
+
   return (
     <Social>
-      <SocialItem>
-        <a href="https://www.linkedin.com/in/sonvh2510/">
-          <i className="fa-brands fa-linkedin-in"></i>
-        </a>
-      </SocialItem>
-      <SocialItem>
-        <a href="https://github.com/sonvh2510">
-          <i className="fa-brands fa-github-alt"></i>
-        </a>
-      </SocialItem>
-      <SocialItem>
-        <a href="https://www.facebook.com/sonvh2510/">
-          <i className="fa-brands fa-facebook-f"></i>
-        </a>
-      </SocialItem>
-      <SocialItem>
-        <a href="mailto:sonvh2510@gmail.com">
-          <i className="fa-solid fa-paper-plane"></i>
-        </a>
-      </SocialItem>
+      {
+        socials && socials.length > 0 && socials.map(s => {
+          return (
+            <SocialItem key={ s.url }>
+              <a href={ s.url } target="_blank" rel="noreferrer">
+                <i className={ SocialEnum[s.type] }></i>
+              </a>
+            </SocialItem>
+          );
+        })
+      }
     </Social>
   );
 };
