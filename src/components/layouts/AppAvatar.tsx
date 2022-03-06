@@ -66,13 +66,11 @@ const AppAvatar = () => {
         setImageSize(180);
       }
     };
-    console.log("Add listener");
     const mediaQuery = window.matchMedia("(max-width: 1024px)");
     mediaQuery.addEventListener("change", resizeHandler);
 
     // Clean up
     return () => {
-      console.log("Clear listener");
       mediaQuery.removeEventListener("change", resizeHandler);
     };
   }, []);
