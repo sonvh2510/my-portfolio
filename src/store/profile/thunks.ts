@@ -2,15 +2,12 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { getProfile } from "../../services/profile";
 
 export const fetchProfile = createAsyncThunk(
-  "profile/getProfile",
-  async (url: string, { rejectWithValue }
+  "profile/fetchProfile",
+  async (arg: void, { rejectWithValue }
   ) => {
     try {
-      const response = await getProfile(url);
-      if (!response) {
-        return rejectWithValue("Get error");
-      }
-      if (!response.data) {
+      const response = await getProfile("/profile");
+      if (!response || !response.data) {
         return rejectWithValue("Get no data returned");
       }
       return response.data.data;

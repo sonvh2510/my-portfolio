@@ -10,10 +10,28 @@ interface ProfileState {
 const profileState: ProfileState = {
   loading: false,
   data: {
-    name: "",
-    title: "",
-    avatar: "",
-    socials: []
+    address: "",
+    age: 0,
+    avatar: "/images/avatar.jpeg",
+    email: "sonvh2510@gmail.com",
+    name: "Vũ Hoàng Sơn",
+    phone: "",
+    residence: "Việt Nam",
+    socials: [
+      {
+        type: "LinkedIn",
+        url: "https://www.linkedin.com/in/sonvh2510"
+      },
+      {
+        type: "Github",
+        url: "https://github.com/sonvh2510"
+      },
+      {
+        type: "Facebook",
+        url: "https://www.facebook.com/sonvh2510"
+      }
+    ],
+    title: "Frontend Developer",
   }
 };
 
@@ -35,7 +53,10 @@ const profileSlice = createSlice({
           name: "",
           avatar: "",
           title: "",
-          socials: []
+          socials: [],
+          address: "",
+          age: 0,
+          email: "",
         };
         state.loading = false;
       });

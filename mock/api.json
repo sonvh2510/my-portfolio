@@ -1,9 +1,13 @@
 {
   "profile": {
     "data": {
-      "name": "Vũ Hoàng Sơn",
-      "title": "Frontend Developer",
+      "address": "Nguyễn Lương Bằng, P. Phú Mỹ, Q.7, TP. Hồ Chí Minh",
+      "age": 28,
       "avatar": "/images/avatar.jpeg",
+      "email": "sonvh2510@gmail.com",
+      "name": "Vũ Hoàng Sơn",
+      "phone": "0914 633 990",
+      "residence": "Việt Nam",
       "socials": [
         {
           "type": "LinkedIn",
@@ -18,10 +22,7 @@
           "url": "https://www.facebook.com/sonvh2510"
         }
       ],
-      "age": 28,
-      "residence": "Việt Nam",
-      "email": "sonvh2510@gmail.com",
-      "address": "Nguyễn Lương Bằng, P. Phú Mỹ, Q.7, TP. Hồ Chí Minh"
+      "title": "Frontend Developer"
     }
   }
 }

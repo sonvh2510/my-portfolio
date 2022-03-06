@@ -5,6 +5,7 @@ import { BlockTitle, PageTitle } from "../styles/globals/elements";
 const InfoList = styled.ul`
   padding-left: 0;
   list-style-type: none;
+
   li {
     b {
       color: green;
@@ -60,7 +61,9 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="white-space-50"></div>
+      </section>
+      <div className="white-space-50"></div>
+      <section className="section-content">
         <div className="row">
           <div className="col-12">
             <BlockTitle>

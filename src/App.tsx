@@ -25,7 +25,7 @@ const App = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(fetchProfile("profile"));
+    dispatch(fetchProfile());
   }, []);
 
   return (
