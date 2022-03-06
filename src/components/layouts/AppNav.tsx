@@ -1,8 +1,6 @@
 import React, { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import "../../assets/scss/fontawesome.scss";
-import "../../assets/scss/light.scss";
 import { BREAKPOINTS_DOWN, BREAKPOINTS_UP } from "../../styles";
 
 const Nav = styled.nav`

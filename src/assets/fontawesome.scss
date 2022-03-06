@@ -1,0 +1,120 @@
+@import 'fontawesome-v6/scss/functions';
+@import 'fontawesome-v6/scss/variables';
+
+@font-face {
+  font-family: 'Font Awesome 6 Pro';
+  font-style: normal;
+  font-weight: 100;
+  font-display: $fa-font-display;
+  src: url('#{$fa-font-path}/fa-thin-100.woff2') format('woff2'),
+  url('#{$fa-font-path}/fa-thin-100.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Pro';
+  font-style: normal;
+  font-weight: 300;
+  font-display: $fa-font-display;
+  src: url('#{$fa-font-path}/fa-light-300.woff2') format('woff2'),
+  url('#{$fa-font-path}/fa-light-300.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: $fa-font-display;
+  src: url('#{$fa-font-path}/fa-regular-400.woff2') format('woff2'),
+  url('#{$fa-font-path}/fa-regular-400.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Pro';
+  font-style: normal;
+  font-weight: 900;
+  font-display: $fa-font-display;
+  src: url('#{$fa-font-path}/fa-solid-900.woff2') format('woff2'),
+  url('#{$fa-font-path}/fa-solid-900.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: $fa-font-display;
+  src: url('#{$fa-font-path}/fa-brands-400.woff2') format('woff2'),
+  url('#{$fa-font-path}/fa-brands-400.ttf') format('truetype');
+}
+
+.far,
+.fa-regular {
+  font-family: $fa-style-family;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fas,
+.fa-solid {
+  font-family: $fa-style-family;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.fat,
+.fa-thin {
+  font-family: $fa-style-family;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.fal,
+.fa-light {
+  font-family: $fa-style-family;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.fab,
+.fa-brands {
+  font-family: 'Font Awesome 6 Brands';
+  font-weight: 400;
+  font-style: normal;
+}
+
+$fa-brand-icons: (
+  "facebook": $fa-var-facebook,
+  "facebook-f": $fa-var-facebook-f,
+  "facebook-messenger": $fa-var-facebook-messenger,
+  "facebook-square": $fa-var-facebook-square,
+  "github": $fa-var-github,
+  "github-alt": $fa-var-github-alt,
+  "github-square": $fa-var-github-square,
+  "linkedin": $fa-var-linkedin,
+  "linkedin-in": $fa-var-linkedin-in,
+);
+$fa-icons: (
+  "briefcase": $fa-var-briefcase,
+  "briefcase-arrow-right": $fa-var-briefcase-arrow-right,
+  "briefcase-blank": $fa-var-briefcase-blank,
+  "briefcase-medical": $fa-var-briefcase-medical,
+  "graduation-cap": $fa-var-graduation-cap,
+  "house": $fa-var-house,
+  "home": $fa-var-home,
+  "paper-plane": $fa-var-paper-plane,
+  "paper-plane-top": $fa-var-paper-plane-top,
+  "paper-plane-alt": $fa-var-paper-plane-alt,
+  "newspaper": $fa-var-newspaper,
+  "user": $fa-var-user,
+);
+
+@each $name, $icon in $fa-brand-icons {
+  .#{$fa-css-prefix}-#{$name}:before {
+    content: fa-content($icon);
+  }
+}
+
+@each $name, $icon in $fa-icons {
+  .#{$fa-css-prefix}-#{$name}::before {
+    content: fa-content($icon);
+  }
+}

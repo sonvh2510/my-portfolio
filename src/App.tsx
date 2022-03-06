@@ -6,6 +6,8 @@ import AppContent from "./components/layouts/AppContent";
 import { fetchProfile } from "./store/profile/thunks";
 import { useAppDispatch } from "./store/hooks";
 
+import "./assets/fontawesome.scss";
+
 export const AppWrapper = styled.div`
   @media (min-width: ${ BREAKPOINTS_UP.lg }) {
     position: fixed;

@@ -3,10 +3,6 @@ import styled from "styled-components";
 import { useAppSelector } from "../../store/hooks";
 import { SocialEnum } from "../../interfaces/profile.interface";
 
-import "../../assets/scss/fontawesome.scss";
-import "../../assets/scss/brands.scss";
-import "../../assets/scss/solid.scss";
-
 const Social = styled.ul`
   list-style-type: none;
   display: flex;
