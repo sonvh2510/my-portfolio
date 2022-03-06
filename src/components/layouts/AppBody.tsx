@@ -1,7 +1,8 @@
-import React, { lazy, Suspense } from "react";
+import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import Loading from "./Loading";
+import routes from "../../routes";
 
 const Body = styled.main`
   background-color: white;
@@ -22,66 +23,23 @@ const Body = styled.main`
     transform: translate(-50%, -50%);
   }
 `;
-
-const Home = lazy(() => import("../../pages/Home"));
-const About = lazy(() => import("../../pages/About"));
-const Resume = lazy(() => import("../../pages/Resume"));
-const Portfolio = lazy(() => import("../../pages/Portfolio"));
-const Blog = lazy(() => import("../../pages/Blog"));
-const Contact = lazy(() => import("../../pages/Contact"));
-
 const AppBody = () => {
   return (
     <Body>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Suspense fallback={ <Loading /> }>
-              <Home />
-            </Suspense>
-          }
-        ></Route>
-        <Route
-          path="/about-me"
-          element={
-            <Suspense fallback={ <Loading /> }>
-              <About />
-            </Suspense>
-          }
-        ></Route>
-        <Route
-          path="/resume"
-          element={
-            <Suspense fallback={ <Loading /> }>
-              <Resume />
-            </Suspense>
-          }
-        ></Route>
-        <Route
-          path="/portfolio"
-          element={
-            <Suspense fallback={ <Loading /> }>
-              <Portfolio />
-            </Suspense>
-          }
-        ></Route>
-        <Route
-          path="/blog"
-          element={
-            <Suspense fallback={ <Loading /> }>
-              <Blog />
-            </Suspense>
-          }
-        ></Route>
-        <Route
-          path="/contact-me"
-          element={
-            <Suspense fallback={ <Loading /> }>
-              <Contact />
-            </Suspense>
-          }
-        ></Route>
+        { routes.map((r) => {
+          return (
+            <Route
+              key={ r.path }
+              path={ r.path }
+              element={
+                <Suspense fallback={ <Loading /> }>
+                  <r.component />
+                </Suspense>
+              }
+            />
+          );
+        }) }
       </Routes>
     </Body>
   );

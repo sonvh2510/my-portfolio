@@ -16,12 +16,12 @@
         {
           "type": "Facebook",
           "url": "https://www.facebook.com/sonvh2510"
-        },
-        {
-          "type": "Email",
-          "url": "mailto:sonvh2510@gmail.com"
         }
-      ]
+      ],
+      "age": 28,
+      "residence": "Việt Nam",
+      "email": "sonvh2510@gmail.com",
+      "address": "Nguyễn Lương Bằng, P. Phú Mỹ, Q.7, TP. Hồ Chí Minh"
     }
   }
 }

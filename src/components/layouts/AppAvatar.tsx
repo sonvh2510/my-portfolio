@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import styled from "styled-components";
 import { useAppSelector } from "../../store/hooks";
 
@@ -43,7 +43,6 @@ const Avatar = styled.div`
 `;
 
 const AppAvatar = () => {
-
   const { avatar, name } = useAppSelector(({ profile }) => {
     return {
       avatar: profile.data.avatar,
@@ -51,9 +50,36 @@ const AppAvatar = () => {
     };
   });
 
+  const [ imgSize, setImageSize ] = useState(() => {
+    if (window.innerWidth >= 1025) {
+      return 180;
+    } else {
+      return 68;
+    }
+  });
+
+  useEffect(() => {
+    const resizeHandler = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        setImageSize(68);
+      } else {
+        setImageSize(180);
+      }
+    };
+    console.log("Add listener");
+    const mediaQuery = window.matchMedia("(max-width: 1024px)");
+    mediaQuery.addEventListener("change", resizeHandler);
+
+    // Clean up
+    return () => {
+      console.log("Clear listener");
+      mediaQuery.removeEventListener("change", resizeHandler);
+    };
+  }, []);
+
   return (
     <Avatar>
-      <img width="180" height="180" src={ avatar } alt={ name } />
+      <img width={ imgSize } height={ imgSize } src={ avatar } alt={ name } />
     </Avatar>
   );
 };
